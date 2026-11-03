@@ -1,0 +1,142 @@
+{
+  "hospitals": {
+    "source_count": 3,
+    "target_count_before": 0,
+    "inserted": 3,
+    "target_count_after": 3,
+    "status": "MATCH"
+  },
+  "users": {
+    "source_count": 166,
+    "target_count_before": 0,
+    "inserted": 166,
+    "target_count_after": 166,
+    "status": "MATCH"
+  },
+  "doctors": {
+    "source_count": 2,
+    "target_count_before": 0,
+    "inserted": 2,
+    "target_count_after": 2,
+    "status": "MATCH"
+  },
+  "patients": {
+    "source_count": 144,
+    "target_count_before": 0,
+    "inserted": 144,
+    "target_count_after": 144,
+    "status": "MATCH"
+  },
+  "opd_appointments": {
+    "source_count": 192,
+    "target_count_before": 0,
+    "inserted": 192,
+    "target_count_after": 192,
+    "status": "MATCH"
+  },
+  "qr_references": {
+    "source_count": 192,
+    "target_count_before": 0,
+    "inserted": 192,
+    "target_count_after": 192,
+    "status": "MATCH"
+  },
+  "consultations": {
+    "source_count": 10,
+    "target_count_before": 0,
+    "inserted": 10,
+    "target_count_after": 10,
+    "status": "MATCH"
+  },
+  "consultation_drafts": {
+    "source_count": 0,
+    "target_count_before": 0,
+    "migrated": 0,
+    "target_count_after": 0,
+    "status": "EMPTY"
+  },
+  "medical_records": {
+    "source_count": 33,
+    "target_count_before": 0,
+    "inserted": 33,
+    "target_count_after": 33,
+    "status": "MATCH"
+  },
+  "intake_sessions": {
+    "source_count": 16,
+    "target_count_before": 0,
+    "inserted": 16,
+    "target_count_after": 16,
+    "status": "MATCH"
+  },
+  "triage_results": {
+    "source_count": 7,
+    "target_count_before": 0,
+    "inserted": 7,
+    "target_count_after": 7,
+    "status": "MATCH"
+  },
+  "treatment_cost_estimates": {
+    "source_count": 37,
+    "target_count_before": 0,
+    "inserted": 37,
+    "target_count_after": 37,
+    "status": "MATCH"
+  },
+  "care_to_cost_assessments": {
+    "source_count": 8,
+    "target_count_before": 0,
+    "inserted": 8,
+    "target_count_after": 8,
+    "status": "MATCH"
+  },
+  "insurance_policies": {
+    "source_count": 1,
+    "target_count_before": 0,
+    "inserted": 1,
+    "target_count_after": 1,
+    "status": "MATCH"
+  },
+  "insurance_claims": {
+    "source_count": 0,
+    "target_count_before": 0,
+    "migrated": 0,
+    "target_count_after": 0,
+    "status": "EMPTY"
+  },
+  "government_schemes": {
+    "source_count": 2,
+    "target_count_before": 0,
+    "inserted": 2,
+    "target_count_after": 2,
+    "status": "MATCH"
+  },
+  "ngo_support": {
+    "source_count": 2,
+    "target_count_before": 0,
+    "inserted": 2,
+    "target_count_after": 2,
+    "status": "MATCH"
+  },
+  "consent_logs": {
+    "source_count": 34,
+    "target_count_before": 0,
+    "inserted": 34,
+    "target_count_after": 34,
+    "status": "MATCH"
+  },
+  "hospital_reviews": {
+    "source_count": 0,
+    "target_count_before": 0,
+    "migrated": 0,
+    "target_count_after": 0,
+    "status": "EMPTY"
+  },
+  "audit_logs": {
+    "source_count": 11,
+    "target_count_before": 0,
+    "inserted": 11,
+    "target_count_after": 11,
+    "status": "MATCH"
+  }
+}

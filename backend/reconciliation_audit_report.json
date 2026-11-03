@@ -1,0 +1,126 @@
+{
+  "all_matched": true,
+  "fk_integrity_pass": true,
+  "table_results": [
+    {
+      "table": "audit_logs",
+      "sqlite_count": 11,
+      "neon_count": 11,
+      "status": "MATCH"
+    },
+    {
+      "table": "care_to_cost_assessments",
+      "sqlite_count": 8,
+      "neon_count": 8,
+      "status": "MATCH"
+    },
+    {
+      "table": "consent_logs",
+      "sqlite_count": 34,
+      "neon_count": 34,
+      "status": "MATCH"
+    },
+    {
+      "table": "consultation_drafts",
+      "sqlite_count": 0,
+      "neon_count": 0,
+      "status": "MATCH"
+    },
+    {
+      "table": "consultations",
+      "sqlite_count": 10,
+      "neon_count": 10,
+      "status": "MATCH"
+    },
+    {
+      "table": "doctors",
+      "sqlite_count": 2,
+      "neon_count": 2,
+      "status": "MATCH"
+    },
+    {
+      "table": "government_schemes",
+      "sqlite_count": 2,
+      "neon_count": 2,
+      "status": "MATCH"
+    },
+    {
+      "table": "hospital_reviews",
+      "sqlite_count": 0,
+      "neon_count": 0,
+      "status": "MATCH"
+    },
+    {
+      "table": "hospitals",
+      "sqlite_count": 3,
+      "neon_count": 3,
+      "status": "MATCH"
+    },
+    {
+      "table": "insurance_claims",
+      "sqlite_count": 0,
+      "neon_count": 0,
+      "status": "MATCH"
+    },
+    {
+      "table": "insurance_policies",
+      "sqlite_count": 1,
+      "neon_count": 1,
+      "status": "MATCH"
+    },
+    {
+      "table": "intake_sessions",
+      "sqlite_count": 16,
+      "neon_count": 16,
+      "status": "MATCH"
+    },
+    {
+      "table": "medical_records",
+      "sqlite_count": 33,
+      "neon_count": 33,
+      "status": "MATCH"
+    },
+    {
+      "table": "ngo_support",
+      "sqlite_count": 2,
+      "neon_count": 2,
+      "status": "MATCH"
+    },
+    {
+      "table": "opd_appointments",
+      "sqlite_count": 192,
+      "neon_count": 192,
+      "status": "MATCH"
+    },
+    {
+      "table": "patients",
+      "sqlite_count": 144,
+      "neon_count": 144,
+      "status": "MATCH"
+    },
+    {
+      "table": "qr_references",
+      "sqlite_count": 192,
+      "neon_count": 192,
+      "status": "MATCH"
+    },
+    {
+      "table": "treatment_cost_estimates",
+      "sqlite_count": 37,
+      "neon_count": 37,
+      "status": "MATCH"
+    },
+    {
+      "table": "triage_results",
+      "sqlite_count": 7,
+      "neon_count": 7,
+      "status": "MATCH"
+    },
+    {
+      "table": "users",
+      "sqlite_count": 166,
+      "neon_count": 166,
+      "status": "MATCH"
+    }
+  ]
+}
