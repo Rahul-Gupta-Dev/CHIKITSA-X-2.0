@@ -16,8 +16,12 @@ import app.models  # register all models on Base.metadata
 # access to the values within the .ini file in use.
 config = context.config
 
-# Dynamically set sqlalchemy.url from app.database
-config.set_main_option("sqlalchemy.url", DATABASE_URL)
+# Dynamically set sqlalchemy.url from environment or app.database
+target_url = os.getenv("ALEMBIC_DATABASE_URL")
+if target_url:
+    config.set_main_option("sqlalchemy.url", target_url)
+elif not config.get_main_option("sqlalchemy.url") or "user:pass@localhost" in config.get_main_option("sqlalchemy.url"):
+    config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 # Interpret the config file for Python logging.
 if config.config_file_name is not None:

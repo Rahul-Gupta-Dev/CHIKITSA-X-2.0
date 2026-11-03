@@ -1,6 +1,13 @@
 import os
 import threading
 from sqlite3 import Connection as SQLite3Connection
+from dotenv import load_dotenv
+
+# Load backend/.env if present
+_env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+if os.path.exists(_env_path):
+    load_dotenv(_env_path)
+
 from sqlalchemy import create_engine, text, inspect, event
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import declarative_base, sessionmaker
@@ -67,6 +74,22 @@ def apply_safe_migrations(target_engine=None):
                 columns = [c["name"] for c in inspector.get_columns("users")]
                 if "password_hash" not in columns:
                     conn.execute(text("ALTER TABLE users ADD COLUMN password_hash VARCHAR"))
+                if "public_id" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN public_id VARCHAR(32)"))
+                if "account_status" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN account_status VARCHAR(32) DEFAULT 'PENDING_APPROVAL'"))
+                if "email_verified" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN email_verified BOOLEAN DEFAULT FALSE"))
+                if "phone_verified" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN phone_verified BOOLEAN DEFAULT FALSE"))
+                if "approval_status" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN approval_status VARCHAR(32)"))
+                if "approved_by" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN approved_by VARCHAR(64)"))
+                if "approved_at" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN approved_at TIMESTAMP"))
+                if "rejection_reason" not in columns:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN rejection_reason VARCHAR(256)"))
 
             if "medical_records" in existing_tables:
                 columns = [c["name"] for c in inspector.get_columns("medical_records")]
@@ -79,6 +102,12 @@ def apply_safe_migrations(target_engine=None):
                     conn.execute(text("ALTER TABLE doctors ADD COLUMN weekly_schedule JSON"))
                 if "blocked_slots" not in columns:
                     conn.execute(text("ALTER TABLE doctors ADD COLUMN blocked_slots JSON"))
+                if "user_id" not in columns:
+                    conn.execute(text("ALTER TABLE doctors ADD COLUMN user_id VARCHAR(64)"))
+                if "medical_registration_number" not in columns:
+                    conn.execute(text("ALTER TABLE doctors ADD COLUMN medical_registration_number VARCHAR(64)"))
+                if "verification_status" not in columns:
+                    conn.execute(text("ALTER TABLE doctors ADD COLUMN verification_status VARCHAR(32) DEFAULT 'VERIFIED'"))
 
             if "opd_appointments" in existing_tables:
                 columns = [c["name"] for c in inspector.get_columns("opd_appointments")]

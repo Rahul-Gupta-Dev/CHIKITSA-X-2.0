@@ -60,12 +60,16 @@ backend/chikitsax.db
 backend/chikitsax_backup_*.db
 backend/test_isolated_*.db
 test_isolated_*.db
+backend/neon_backup_*.json
+neon_backup_*.json
 
 # Medical Document Uploads & Sensitive Inventories (Strict Patient Privacy)
 backend/uploads/
 uploads/
 backend/medical_files_inventory.json
 medical_files_inventory.json
+backend/identity_mapping_audit_report.json
+identity_mapping_audit_report.json
 
 
 

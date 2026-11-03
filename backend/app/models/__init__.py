@@ -18,6 +18,12 @@ from app.models.financial import (
 )
 from app.models.consent import ConsentLogModel
 from app.models.audit import AuditLogModel
+from app.models.auth import (
+    RefreshTokenModel,
+    PasswordResetTokenModel,
+    HospitalInvitationModel,
+    AuthAuditLogModel
+)
 
 __all__ = [
     "UserModel",
@@ -40,4 +46,8 @@ __all__ = [
     "TreatmentCostEstimateModel",
     "ConsentLogModel",
     "AuditLogModel",
+    "RefreshTokenModel",
+    "PasswordResetTokenModel",
+    "HospitalInvitationModel",
+    "AuthAuditLogModel",
 ]
