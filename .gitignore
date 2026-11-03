@@ -1,0 +1,68 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS & Temp
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Dependencies & Build Outputs
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+
+# Environment & Secrets (Preserve only safe templates)
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python Virtual Environments & Bytecode Cache
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+venv/
+backend/venv/
+ENV/
+env/
+
+# Databases, Backups, and Isolated Test DBs (Strictly Excluded)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backend/chikitsax.db
+backend/chikitsax_backup_*.db
+backend/test_isolated_*.db
+test_isolated_*.db
+
+# Medical Document Uploads (Strict Patient Privacy)
+backend/uploads/
+uploads/
+
+
